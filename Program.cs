@@ -21,9 +21,9 @@ namespace apiConnection
             {
                 //a request looks like:
                 //that is known as a verbal
-                var httpResponseMessage = await httpClient.GetAsync(url); //what is "await". It is used to do works simultaniously. 
-                                                                          //that will allow my app will not only wait to this process and stop the other, instead
-                                                                          //will continue other tasks. 
+                var httpResponseMessage = await httpClient.GetAsync(url); //what is "await"? It is used to await the get async method to finish
+                                                                          // but at the same time we dont want to freeze our application
+                                                                          //We use it cuz we can't wait inside a non-asyn method.
 
             }
             catch (Exception)
