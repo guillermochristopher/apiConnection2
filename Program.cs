@@ -28,7 +28,13 @@ namespace apiConnection
                 var httpResponseMessage = await httpClient.GetAsync(url); //what is "await"? It is used to await the get async method to finish
                                                                           // but at the same time we dont want to freeze our application
                                                                           //We use it cuz we can't wait inside a non-asyn method.
-
+                //now we need to "convert" the previous object in something we can work on it
+                //we're awating to load the entire page that is gonna be saved in "httpResponseMessage", wich
+                //is not going to be the actual data.But now, we can get the data we want from the content of that response message.
+                //To do thatm let's gonna read the string from the response content using:
+                string jsonRespone = await httpResponseMessage.Content.ReadAsStringAsync();
+                //then just print the result
+                Console.WriteLine(jsonRespone);
             }
             catch (Exception e)
             {
