@@ -1,20 +1,24 @@
 ﻿using Newtonsoft.Json;
 using System.Net.Http;
 using System;
+using System.Threading.Tasks;//lybrary we need to use if we want to use Task keyword
 
 namespace apiConnection
 {
-    class Prgram
+    class Program
     {
-        //getting the url api and save it in the "url" variable, so that i can use it later
-        string url = "https://api.coinbase.com/v2/exchange-rates";
 
-        //http client is used to be able to manage requests to server
-        //to create a http client object do the next:
-        HttpClient httpClient = new HttpClient();
+        static async Task Main(string[] args)//this main method uses "async" keyword. to specify them that Main method it is going to do async processess.
+                                             //If u dont specify that Main method will not do that. Also, "Task" is used to specify that Main method is going to return an async task.
 
-        public async void Main(string[] args)//this main method uses "async" keyword. to specify them that Main method it is going to do async processess. If u dont specify that Main method will not do that.
         {
+            //getting the url api and save it in the "url" variable, so that i can use it later
+            string url = "https://api.coinbase.com/v2/exchange-rates";
+
+            //http client is used to be able to manage requests to server
+            //to create a http client object do the next:
+            HttpClient httpClient = new HttpClient();
+
             //is a good practice to use the try and catch statment coz
             //countless issues could happen. So:
             try
@@ -26,10 +30,10 @@ namespace apiConnection
                                                                           //We use it cuz we can't wait inside a non-asyn method.
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                throw;
+                Console.WriteLine(e.Message);
             }
 
         }
