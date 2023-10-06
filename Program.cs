@@ -3,6 +3,7 @@ using System.Net.Http;
 using System;
 using System.Threading.Tasks;//lybrary we need to use if we want to use Task keyword
 
+
 namespace apiConnection
 {
     class Program
@@ -13,7 +14,7 @@ namespace apiConnection
 
         {
             //getting the url api and save it in the "url" variable, so that i can use it later
-            string url = "https://api.coinbase.com/v2/exchange-rates";
+            string url = "https://poetrydb.org/title/Ozymandias/lines.json";
 
             //http client is used to be able to manage requests to server
             //to create a http client object do the next:
@@ -39,6 +40,13 @@ namespace apiConnection
                 //Deserialize process: Converting json response into a c# array of type Post[] (the class we added w/ json data as c# properties)
                 var myPost = JsonConvert.DeserializeObject<Rates[]>(jsonRespone);
 
+                /*print the array of object using the iteration
+                foreach (var post in myPost)
+                {
+                    //print the rates from Rates class
+                    Console.WriteLine($"{post.EUR}");
+                }
+                */
             }
             catch (Exception e)
             {
