@@ -29,12 +29,16 @@ namespace apiConnection
                                                                           // but at the same time we dont want to freeze our application
                                                                           //We use it cuz we can't wait inside a non-asyn method.
                 
-                //we're awating to load the entire page that is gonna be saved in "httpResponseMessage", wich
+                //we're awating to load the entire page that is gonna be saved in "httpResponseMessage", which
                 //is not going to be the actual data.But now, we can get the data we want from the content of that response message.
                 //To do thatm let's gonna read the string from the response content using:
                 string jsonRespone = await httpResponseMessage.Content.ReadAsStringAsync();
                 //then just print the result
                 Console.WriteLine(jsonRespone);
+
+                //Deserialize process: Converting json response into a c# array of type Post[] (the class we added w/ json data as c# properties)
+                var myPost = JsonConvert.DeserializeObject<Rates[]>(jsonRespone);
+
             }
             catch (Exception e)
             {
