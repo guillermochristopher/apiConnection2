@@ -1,7 +1,7 @@
 # apiConnection2
 This project of an API procedure has more efficient workflows. 
 
-It is a C# program that uses the Newtonsoft.Json library to read a JSON response from an API. The API in this case is the Coinbase exchange rate API. Available at: https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/api-exchange-rates
+It is a C# program that uses the 'Newtonsoft.Json' library to read a JSON response from an API. The API in this case is the Coinbase exchange rate API. Available at: https://docs.cloud.coinbase.com/sign-in-with-coinbase/docs/api-exchange-rates
 
 The program starts by creating a new HttpClient object. This object is used to make HTTP requests to the API. Next, the program makes a GET request to the API's exchange rate endpoint. The response from the API is saved in a variable called httpResponseMessage.
 
