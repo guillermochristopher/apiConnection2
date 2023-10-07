@@ -18,3 +18,14 @@ Here is a more detailed explanation of some of the key concepts in the code:
 * **Newtonsoft.Json:** Newtonsoft.Json is a popular JSON library for C#. It can be used to serialize and deserialize JSON objects to and from C# objects.
 
 Overall, the code provided is a simple example of how to use Newtonsoft.Json to read a JSON response from an API. The same principles can be used to read JSON responses from any API.
+
+# How to work with it.
+
+The app is console app, i.e., it doesn't use windows form to work, so if you had cloned this repo there is a way to change currency output. 
+In the app there's a context class named "**Post.cs**". There you will see a method named "Rates", where there are +100 currencies available. 
+
+![image](https://github.com/guillermochristopher/apiConnection2/assets/61841721/541059eb-e899-404a-b361-7bf6d2a71c6e)
+
+As you will see, the currencies are properties which you can access from the main class: Program.cs. To change currency output, go straight to the next line: 
+var **rates**= data.rates.(CURRENCY_NAME); 
+Change it for some one of the list in **Post.cs** class. And, that's it!  
