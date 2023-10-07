@@ -14,7 +14,7 @@ namespace apiConnection
 
         {
             //getting the url api and save it in the "url" variable, so that i can use it later
-            string url = "https://poetrydb.org/title/Ozymandias/lines.json";
+            string url = "https://api.coinbase.com/v2/exchange-rates";
 
             //http client is used to be able to manage requests to server
             //to create a http client object do the next:
@@ -35,18 +35,20 @@ namespace apiConnection
                 //To do thatm let's gonna read the string from the response content using:
                 string jsonRespone = await httpResponseMessage.Content.ReadAsStringAsync();
                 //then just print the result
-                Console.WriteLine(jsonRespone);
+                //Console.WriteLine(jsonRespone);
 
                 //Deserialize process: Converting json response into a c# array of type Post[] (the class we added w/ json data as c# properties)
-                var myPost = JsonConvert.DeserializeObject<Rates[]>(jsonRespone);
 
-                /*print the array of object using the iteration
-                foreach (var post in myPost)
-                {
-                    //print the rates from Rates class
-                    Console.WriteLine($"{post.EUR}");
-                }
-                */
+                var root = JsonConvert.DeserializeObject<Root>(jsonRespone);
+
+                // Access the data
+                var data = root.data;
+                var currency = data.currency;
+                var rates = data.rates.EUR;
+
+                //print the array of object using the iteration
+                Console.WriteLine(rates);
+
             }
             catch (Exception e)
             {

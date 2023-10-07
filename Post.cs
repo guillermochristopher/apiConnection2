@@ -8,1361 +8,470 @@ using System.Threading.Tasks;
 namespace apiConnection
 {
     // Root myDeserializedClass = JsonConvert.DeserializeObject<Poat>(myJsonResponse);
+
+    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
     public class Data
     {
-        [JsonProperty("currency")]
-        public string Currency;
-
-        [JsonProperty("rates")]
-        public Rates Rates;
+        public string currency { get; set; }
+        public Rates rates { get; set; }
     }
 
     public class Rates
     {
         [JsonProperty("00")]
-        public string _00;
+        public string _00 { get; set; }
 
         [JsonProperty("1INCH")]
-        public string _1INCH;
-
-        [JsonProperty("AAVE")]
-        public string AAVE;
-
-        [JsonProperty("ABT")]
-        public string ABT;
-
-        [JsonProperty("ACH")]
-        public string ACH;
-
-        [JsonProperty("ACS")]
-        public string ACS;
-
-        [JsonProperty("ADA")]
-        public string ADA;
-
-        [JsonProperty("AED")]
-        public string AED;
-
-        [JsonProperty("AERGO")]
-        public string AERGO;
-
-        [JsonProperty("AFN")]
-        public string AFN;
-
-        [JsonProperty("AGLD")]
-        public string AGLD;
-
-        [JsonProperty("AIOZ")]
-        public string AIOZ;
-
-        [JsonProperty("ALCX")]
-        public string ALCX;
-
-        [JsonProperty("ALEPH")]
-        public string ALEPH;
-
-        [JsonProperty("ALGO")]
-        public string ALGO;
-
-        [JsonProperty("ALICE")]
-        public string ALICE;
-
-        [JsonProperty("ALL")]
-        public string ALL;
-
-        [JsonProperty("AMD")]
-        public string AMD;
-
-        [JsonProperty("AMP")]
-        public string AMP;
-
-        [JsonProperty("ANG")]
-        public string ANG;
-
-        [JsonProperty("ANKR")]
-        public string ANKR;
-
-        [JsonProperty("ANT")]
-        public string ANT;
-
-        [JsonProperty("AOA")]
-        public string AOA;
-
-        [JsonProperty("APE")]
-        public string APE;
-
-        [JsonProperty("API3")]
-        public string API3;
-
-        [JsonProperty("APT")]
-        public string APT;
-
-        [JsonProperty("ARB")]
-        public string ARB;
-
-        [JsonProperty("ARPA")]
-        public string ARPA;
-
-        [JsonProperty("ARS")]
-        public string ARS;
-
-        [JsonProperty("ASM")]
-        public string ASM;
-
-        [JsonProperty("AST")]
-        public string AST;
-
-        [JsonProperty("ATA")]
-        public string ATA;
-
-        [JsonProperty("ATOM")]
-        public string ATOM;
-
-        [JsonProperty("AUCTION")]
-        public string AUCTION;
-
-        [JsonProperty("AUD")]
-        public string AUD;
-
-        [JsonProperty("AUDIO")]
-        public string AUDIO;
-
-        [JsonProperty("AURORA")]
-        public string AURORA;
-
-        [JsonProperty("AVAX")]
-        public string AVAX;
-
-        [JsonProperty("AVT")]
-        public string AVT;
-
-        [JsonProperty("AWG")]
-        public string AWG;
-
-        [JsonProperty("AXL")]
-        public string AXL;
-
-        [JsonProperty("AXS")]
-        public string AXS;
-
-        [JsonProperty("AZN")]
-        public string AZN;
-
-        [JsonProperty("BADGER")]
-        public string BADGER;
-
-        [JsonProperty("BAL")]
-        public string BAL;
-
-        [JsonProperty("BAM")]
-        public string BAM;
-
-        [JsonProperty("BAND")]
-        public string BAND;
-
-        [JsonProperty("BAT")]
-        public string BAT;
-
-        [JsonProperty("BBD")]
-        public string BBD;
-
-        [JsonProperty("BCH")]
-        public string BCH;
-
-        [JsonProperty("BDT")]
-        public string BDT;
-
-        [JsonProperty("BGN")]
-        public string BGN;
-
-        [JsonProperty("BHD")]
-        public string BHD;
-
-        [JsonProperty("BICO")]
-        public string BICO;
-
-        [JsonProperty("BIF")]
-        public string BIF;
-
-        [JsonProperty("BIT")]
-        public string BIT;
-
-        [JsonProperty("BLUR")]
-        public string BLUR;
-
-        [JsonProperty("BLZ")]
-        public string BLZ;
-
-        [JsonProperty("BMD")]
-        public string BMD;
-
-        [JsonProperty("BND")]
-        public string BND;
-
-        [JsonProperty("BNT")]
-        public string BNT;
-
-        [JsonProperty("BOB")]
-        public string BOB;
-
-        [JsonProperty("BOBA")]
-        public string BOBA;
-
-        [JsonProperty("BOND")]
-        public string BOND;
-
-        [JsonProperty("BRL")]
-        public string BRL;
-
-        [JsonProperty("BSD")]
-        public string BSD;
-
-        [JsonProperty("BSV")]
-        public string BSV;
-
-        [JsonProperty("BTC")]
-        public string BTC;
-
-        [JsonProperty("BTN")]
-        public string BTN;
-
-        [JsonProperty("BTRST")]
-        public string BTRST;
-
-        [JsonProperty("BUSD")]
-        public string BUSD;
-
-        [JsonProperty("BWP")]
-        public string BWP;
-
-        [JsonProperty("BYN")]
-        public string BYN;
-
-        [JsonProperty("BYR")]
-        public string BYR;
-
-        [JsonProperty("BZD")]
-        public string BZD;
-
-        [JsonProperty("C98")]
-        public string C98;
-
-        [JsonProperty("CAD")]
-        public string CAD;
-
-        [JsonProperty("CBETH")]
-        public string CBETH;
-
-        [JsonProperty("CDF")]
-        public string CDF;
-
-        [JsonProperty("CELR")]
-        public string CELR;
-
-        [JsonProperty("CGLD")]
-        public string CGLD;
-
-        [JsonProperty("CHF")]
-        public string CHF;
-
-        [JsonProperty("CHZ")]
-        public string CHZ;
-
-        [JsonProperty("CLF")]
-        public string CLF;
-
-        [JsonProperty("CLP")]
-        public string CLP;
-
-        [JsonProperty("CLV")]
-        public string CLV;
-
-        [JsonProperty("CNH")]
-        public string CNH;
-
-        [JsonProperty("CNY")]
-        public string CNY;
-
-        [JsonProperty("COMP")]
-        public string COMP;
-
-        [JsonProperty("COP")]
-        public string COP;
-
-        [JsonProperty("COTI")]
-        public string COTI;
-
-        [JsonProperty("COVAL")]
-        public string COVAL;
-
-        [JsonProperty("CRC")]
-        public string CRC;
-
-        [JsonProperty("CRO")]
-        public string CRO;
-
-        [JsonProperty("CRPT")]
-        public string CRPT;
-
-        [JsonProperty("CRV")]
-        public string CRV;
-
-        [JsonProperty("CTSI")]
-        public string CTSI;
-
-        [JsonProperty("CTX")]
-        public string CTX;
-
-        [JsonProperty("CUC")]
-        public string CUC;
-
-        [JsonProperty("CUP")]
-        public string CUP;
-
-        [JsonProperty("CVC")]
-        public string CVC;
-
-        [JsonProperty("CVE")]
-        public string CVE;
-
-        [JsonProperty("CVX")]
-        public string CVX;
-
-        [JsonProperty("CZK")]
-        public string CZK;
-
-        [JsonProperty("DAI")]
-        public string DAI;
-
-        [JsonProperty("DAR")]
-        public string DAR;
-
-        [JsonProperty("DASH")]
-        public string DASH;
-
-        [JsonProperty("DDX")]
-        public string DDX;
-
-        [JsonProperty("DESO")]
-        public string DESO;
-
-        [JsonProperty("DEXT")]
-        public string DEXT;
-
-        [JsonProperty("DIA")]
-        public string DIA;
-
-        [JsonProperty("DIMO")]
-        public string DIMO;
-
-        [JsonProperty("DJF")]
-        public string DJF;
-
-        [JsonProperty("DKK")]
-        public string DKK;
-
-        [JsonProperty("DNT")]
-        public string DNT;
-
-        [JsonProperty("DOGE")]
-        public string DOGE;
-
-        [JsonProperty("DOP")]
-        public string DOP;
-
-        [JsonProperty("DOT")]
-        public string DOT;
-
-        [JsonProperty("DREP")]
-        public string DREP;
-
-        [JsonProperty("DYP")]
-        public string DYP;
-
-        [JsonProperty("DZD")]
-        public string DZD;
-
-        [JsonProperty("EEK")]
-        public string EEK;
-
-        [JsonProperty("EGLD")]
-        public string EGLD;
-
-        [JsonProperty("EGP")]
-        public string EGP;
-
-        [JsonProperty("ELA")]
-        public string ELA;
-
-        [JsonProperty("ENJ")]
-        public string ENJ;
-
-        [JsonProperty("ENS")]
-        public string ENS;
-
-        [JsonProperty("EOS")]
-        public string EOS;
-
-        [JsonProperty("ERN")]
-        public string ERN;
-
-        [JsonProperty("ETB")]
-        public string ETB;
-
-        [JsonProperty("ETC")]
-        public string ETC;
-
-        [JsonProperty("ETH")]
-        public string ETH;
-
-        [JsonProperty("ETH2")]
-        public string ETH2;
-
-        [JsonProperty("EUR")]
-        public string EUR;
-
-        [JsonProperty("EUROC")]
-        public string EUROC;
-
-        [JsonProperty("FARM")]
-        public string FARM;
-
-        [JsonProperty("FET")]
-        public string FET;
-
-        [JsonProperty("FIDA")]
-        public string FIDA;
-
-        [JsonProperty("FIL")]
-        public string FIL;
-
-        [JsonProperty("FIS")]
-        public string FIS;
-
-        [JsonProperty("FJD")]
-        public string FJD;
-
-        [JsonProperty("FKP")]
-        public string FKP;
-
-        [JsonProperty("FLOW")]
-        public string FLOW;
-
-        [JsonProperty("FLR")]
-        public string FLR;
-
-        [JsonProperty("FORT")]
-        public string FORT;
-
-        [JsonProperty("FORTH")]
-        public string FORTH;
-
-        [JsonProperty("FOX")]
-        public string FOX;
-
-        [JsonProperty("FX")]
-        public string FX;
-
-        [JsonProperty("GAL")]
-        public string GAL;
-
-        [JsonProperty("GALA")]
-        public string GALA;
-
-        [JsonProperty("GBP")]
-        public string GBP;
-
-        [JsonProperty("GEL")]
-        public string GEL;
-
-        [JsonProperty("GFI")]
-        public string GFI;
-
-        [JsonProperty("GGP")]
-        public string GGP;
-
-        [JsonProperty("GHS")]
-        public string GHS;
-
-        [JsonProperty("GHST")]
-        public string GHST;
-
-        [JsonProperty("GIP")]
-        public string GIP;
-
-        [JsonProperty("GLM")]
-        public string GLM;
-
-        [JsonProperty("GMD")]
-        public string GMD;
-
-        [JsonProperty("GMT")]
-        public string GMT;
-
-        [JsonProperty("GNF")]
-        public string GNF;
-
-        [JsonProperty("GNO")]
-        public string GNO;
-
-        [JsonProperty("GNT")]
-        public string GNT;
-
-        [JsonProperty("GODS")]
-        public string GODS;
-
-        [JsonProperty("GRT")]
-        public string GRT;
-
-        [JsonProperty("GST")]
-        public string GST;
-
-        [JsonProperty("GTC")]
-        public string GTC;
-
-        [JsonProperty("GTQ")]
-        public string GTQ;
-
-        [JsonProperty("GUSD")]
-        public string GUSD;
-
-        [JsonProperty("GYD")]
-        public string GYD;
-
-        [JsonProperty("GYEN")]
-        public string GYEN;
-
-        [JsonProperty("HBAR")]
-        public string HBAR;
-
-        [JsonProperty("HFT")]
-        public string HFT;
-
-        [JsonProperty("HIGH")]
-        public string HIGH;
-
-        [JsonProperty("HKD")]
-        public string HKD;
-
-        [JsonProperty("HNL")]
-        public string HNL;
-
-        [JsonProperty("HNT")]
-        public string HNT;
-
-        [JsonProperty("HOPR")]
-        public string HOPR;
-
-        [JsonProperty("HRK")]
-        public string HRK;
-
-        [JsonProperty("HTG")]
-        public string HTG;
-
-        [JsonProperty("HUF")]
-        public string HUF;
-
-        [JsonProperty("ICP")]
-        public string ICP;
-
-        [JsonProperty("IDEX")]
-        public string IDEX;
-
-        [JsonProperty("IDR")]
-        public string IDR;
-
-        [JsonProperty("ILS")]
-        public string ILS;
-
-        [JsonProperty("ILV")]
-        public string ILV;
-
-        [JsonProperty("IMP")]
-        public string IMP;
-
-        [JsonProperty("IMX")]
-        public string IMX;
-
-        [JsonProperty("INDEX")]
-        public string INDEX;
-
-        [JsonProperty("INJ")]
-        public string INJ;
-
-        [JsonProperty("INR")]
-        public string INR;
-
-        [JsonProperty("INV")]
-        public string INV;
-
-        [JsonProperty("IOTX")]
-        public string IOTX;
-
-        [JsonProperty("IQD")]
-        public string IQD;
-
-        [JsonProperty("IRR")]
-        public string IRR;
-
-        [JsonProperty("ISK")]
-        public string ISK;
-
-        [JsonProperty("JASMY")]
-        public string JASMY;
-
-        [JsonProperty("JEP")]
-        public string JEP;
-
-        [JsonProperty("JMD")]
-        public string JMD;
-
-        [JsonProperty("JOD")]
-        public string JOD;
-
-        [JsonProperty("JPY")]
-        public string JPY;
-
-        [JsonProperty("JUP")]
-        public string JUP;
-
-        [JsonProperty("KAVA")]
-        public string KAVA;
-
-        [JsonProperty("KEEP")]
-        public string KEEP;
-
-        [JsonProperty("KES")]
-        public string KES;
-
-        [JsonProperty("KGS")]
-        public string KGS;
-
-        [JsonProperty("KHR")]
-        public string KHR;
-
-        [JsonProperty("KMF")]
-        public string KMF;
-
-        [JsonProperty("KNC")]
-        public string KNC;
-
-        [JsonProperty("KPW")]
-        public string KPW;
-
-        [JsonProperty("KRL")]
-        public string KRL;
-
-        [JsonProperty("KRW")]
-        public string KRW;
-
-        [JsonProperty("KSM")]
-        public string KSM;
-
-        [JsonProperty("KWD")]
-        public string KWD;
-
-        [JsonProperty("KYD")]
-        public string KYD;
-
-        [JsonProperty("KZT")]
-        public string KZT;
-
-        [JsonProperty("LAK")]
-        public string LAK;
-
-        [JsonProperty("LBP")]
-        public string LBP;
-
-        [JsonProperty("LCX")]
-        public string LCX;
-
-        [JsonProperty("LDO")]
-        public string LDO;
-
-        [JsonProperty("LINK")]
-        public string LINK;
-
-        [JsonProperty("LIT")]
-        public string LIT;
-
-        [JsonProperty("LKR")]
-        public string LKR;
-
-        [JsonProperty("LOKA")]
-        public string LOKA;
-
-        [JsonProperty("LOOM")]
-        public string LOOM;
-
-        [JsonProperty("LPT")]
-        public string LPT;
-
-        [JsonProperty("LQTY")]
-        public string LQTY;
-
-        [JsonProperty("LRC")]
-        public string LRC;
-
-        [JsonProperty("LRD")]
-        public string LRD;
-
-        [JsonProperty("LSETH")]
-        public string LSETH;
-
-        [JsonProperty("LSL")]
-        public string LSL;
-
-        [JsonProperty("LTC")]
-        public string LTC;
-
-        [JsonProperty("LTL")]
-        public string LTL;
-
-        [JsonProperty("LVL")]
-        public string LVL;
-
-        [JsonProperty("LYD")]
-        public string LYD;
-
-        [JsonProperty("MAD")]
-        public string MAD;
-
-        [JsonProperty("MAGIC")]
-        public string MAGIC;
-
-        [JsonProperty("MANA")]
-        public string MANA;
-
-        [JsonProperty("MASK")]
-        public string MASK;
-
-        [JsonProperty("MATH")]
-        public string MATH;
-
-        [JsonProperty("MATIC")]
-        public string MATIC;
-
-        [JsonProperty("MCO2")]
-        public string MCO2;
-
-        [JsonProperty("MDL")]
-        public string MDL;
-
-        [JsonProperty("MDT")]
-        public string MDT;
-
-        [JsonProperty("MEDIA")]
-        public string MEDIA;
-
-        [JsonProperty("METIS")]
-        public string METIS;
-
-        [JsonProperty("MGA")]
-        public string MGA;
-
-        [JsonProperty("MINA")]
-        public string MINA;
-
-        [JsonProperty("MIR")]
-        public string MIR;
-
-        [JsonProperty("MKD")]
-        public string MKD;
-
-        [JsonProperty("MKR")]
-        public string MKR;
-
-        [JsonProperty("MLN")]
-        public string MLN;
-
-        [JsonProperty("MMK")]
-        public string MMK;
-
-        [JsonProperty("MNDE")]
-        public string MNDE;
-
-        [JsonProperty("MNT")]
-        public string MNT;
-
-        [JsonProperty("MONA")]
-        public string MONA;
-
-        [JsonProperty("MOP")]
-        public string MOP;
-
-        [JsonProperty("MPL")]
-        public string MPL;
-
-        [JsonProperty("MRO")]
-        public string MRO;
-
-        [JsonProperty("MRU")]
-        public string MRU;
-
-        [JsonProperty("MSOL")]
-        public string MSOL;
-
-        [JsonProperty("MTL")]
-        public string MTL;
-
-        [JsonProperty("MULTI")]
-        public string MULTI;
-
-        [JsonProperty("MUR")]
-        public string MUR;
-
-        [JsonProperty("MUSD")]
-        public string MUSD;
-
-        [JsonProperty("MUSE")]
-        public string MUSE;
-
-        [JsonProperty("MVR")]
-        public string MVR;
-
-        [JsonProperty("MWK")]
-        public string MWK;
-
-        [JsonProperty("MXC")]
-        public string MXC;
-
-        [JsonProperty("MXN")]
-        public string MXN;
-
-        [JsonProperty("MYR")]
-        public string MYR;
-
-        [JsonProperty("MZN")]
-        public string MZN;
-
-        [JsonProperty("NAD")]
-        public string NAD;
-
-        [JsonProperty("NCT")]
-        public string NCT;
-
-        [JsonProperty("NEAR")]
-        public string NEAR;
-
-        [JsonProperty("NEST")]
-        public string NEST;
-
-        [JsonProperty("NGN")]
-        public string NGN;
-
-        [JsonProperty("NIO")]
-        public string NIO;
-
-        [JsonProperty("NKN")]
-        public string NKN;
-
-        [JsonProperty("NMR")]
-        public string NMR;
-
-        [JsonProperty("NOK")]
-        public string NOK;
-
-        [JsonProperty("NPR")]
-        public string NPR;
-
-        [JsonProperty("NU")]
-        public string NU;
-
-        [JsonProperty("NZD")]
-        public string NZD;
-
-        [JsonProperty("OCEAN")]
-        public string OCEAN;
-
-        [JsonProperty("OGN")]
-        public string OGN;
-
-        [JsonProperty("OMG")]
-        public string OMG;
-
-        [JsonProperty("OMR")]
-        public string OMR;
-
-        [JsonProperty("OOKI")]
-        public string OOKI;
-
-        [JsonProperty("OP")]
-        public string OP;
-
-        [JsonProperty("ORCA")]
-        public string ORCA;
-
-        [JsonProperty("ORN")]
-        public string ORN;
-
-        [JsonProperty("OSMO")]
-        public string OSMO;
-
-        [JsonProperty("OXT")]
-        public string OXT;
-
-        [JsonProperty("PAB")]
-        public string PAB;
-
-        [JsonProperty("PAX")]
-        public string PAX;
-
-        [JsonProperty("PEN")]
-        public string PEN;
-
-        [JsonProperty("PERP")]
-        public string PERP;
-
-        [JsonProperty("PGK")]
-        public string PGK;
-
-        [JsonProperty("PHP")]
-        public string PHP;
-
-        [JsonProperty("PKR")]
-        public string PKR;
-
-        [JsonProperty("PLA")]
-        public string PLA;
-
-        [JsonProperty("PLN")]
-        public string PLN;
-
-        [JsonProperty("PLU")]
-        public string PLU;
-
-        [JsonProperty("PNG")]
-        public string PNG;
-
-        [JsonProperty("POLS")]
-        public string POLS;
-
-        [JsonProperty("POLY")]
-        public string POLY;
-
-        [JsonProperty("POND")]
-        public string POND;
-
-        [JsonProperty("POWR")]
-        public string POWR;
-
-        [JsonProperty("PRIME")]
-        public string PRIME;
-
-        [JsonProperty("PRO")]
-        public string PRO;
-
-        [JsonProperty("PRQ")]
-        public string PRQ;
-
-        [JsonProperty("PUNDIX")]
-        public string PUNDIX;
-
-        [JsonProperty("PYG")]
-        public string PYG;
-
-        [JsonProperty("PYR")]
-        public string PYR;
-
-        [JsonProperty("PYUSD")]
-        public string PYUSD;
-
-        [JsonProperty("QAR")]
-        public string QAR;
-
-        [JsonProperty("QI")]
-        public string QI;
-
-        [JsonProperty("QNT")]
-        public string QNT;
-
-        [JsonProperty("QSP")]
-        public string QSP;
-
-        [JsonProperty("QUICK")]
-        public string QUICK;
-
-        [JsonProperty("RAD")]
-        public string RAD;
-
-        [JsonProperty("RAI")]
-        public string RAI;
-
-        [JsonProperty("RARE")]
-        public string RARE;
-
-        [JsonProperty("RARI")]
-        public string RARI;
-
-        [JsonProperty("RBN")]
-        public string RBN;
-
-        [JsonProperty("REN")]
-        public string REN;
-
-        [JsonProperty("REP")]
-        public string REP;
-
-        [JsonProperty("REPV2")]
-        public string REPV2;
-
-        [JsonProperty("REQ")]
-        public string REQ;
-
-        [JsonProperty("RGT")]
-        public string RGT;
-
-        [JsonProperty("RLC")]
-        public string RLC;
-
-        [JsonProperty("RLY")]
-        public string RLY;
-
-        [JsonProperty("RNDR")]
-        public string RNDR;
-
-        [JsonProperty("RON")]
-        public string RON;
-
-        [JsonProperty("ROSE")]
-        public string ROSE;
-
-        [JsonProperty("RPL")]
-        public string RPL;
-
-        [JsonProperty("RSD")]
-        public string RSD;
-
-        [JsonProperty("RUB")]
-        public string RUB;
-
-        [JsonProperty("RWF")]
-        public string RWF;
-
-        [JsonProperty("SAND")]
-        public string SAND;
-
-        [JsonProperty("SAR")]
-        public string SAR;
-
-        [JsonProperty("SBD")]
-        public string SBD;
-
-        [JsonProperty("SCR")]
-        public string SCR;
-
-        [JsonProperty("SDG")]
-        public string SDG;
-
-        [JsonProperty("SEI")]
-        public string SEI;
-
-        [JsonProperty("SEK")]
-        public string SEK;
-
-        [JsonProperty("SGD")]
-        public string SGD;
-
-        [JsonProperty("SHIB")]
-        public string SHIB;
-
-        [JsonProperty("SHP")]
-        public string SHP;
-
-        [JsonProperty("SHPING")]
-        public string SHPING;
-
-        [JsonProperty("SKK")]
-        public string SKK;
-
-        [JsonProperty("SKL")]
-        public string SKL;
-
-        [JsonProperty("SLL")]
-        public string SLL;
-
-        [JsonProperty("SNT")]
-        public string SNT;
-
-        [JsonProperty("SNX")]
-        public string SNX;
-
-        [JsonProperty("SOL")]
-        public string SOL;
-
-        [JsonProperty("SOS")]
-        public string SOS;
-
-        [JsonProperty("SPA")]
-        public string SPA;
-
-        [JsonProperty("SPELL")]
-        public string SPELL;
-
-        [JsonProperty("SRD")]
-        public string SRD;
-
-        [JsonProperty("SSP")]
-        public string SSP;
-
-        [JsonProperty("STD")]
-        public string STD;
-
-        [JsonProperty("STG")]
-        public string STG;
-
-        [JsonProperty("STORJ")]
-        public string STORJ;
-
-        [JsonProperty("STX")]
-        public string STX;
-
-        [JsonProperty("SUI")]
-        public string SUI;
-
-        [JsonProperty("SUKU")]
-        public string SUKU;
-
-        [JsonProperty("SUPER")]
-        public string SUPER;
-
-        [JsonProperty("SUSHI")]
-        public string SUSHI;
-
-        [JsonProperty("SVC")]
-        public string SVC;
-
-        [JsonProperty("SWFTC")]
-        public string SWFTC;
-
-        [JsonProperty("SYLO")]
-        public string SYLO;
-
-        [JsonProperty("SYN")]
-        public string SYN;
-
-        [JsonProperty("SYP")]
-        public string SYP;
-
-        [JsonProperty("SZL")]
-        public string SZL;
-
-        [JsonProperty("T")]
-        public string T;
-
-        [JsonProperty("THB")]
-        public string THB;
-
-        [JsonProperty("TIME")]
-        public string TIME;
-
-        [JsonProperty("TJS")]
-        public string TJS;
-
-        [JsonProperty("TMM")]
-        public string TMM;
-
-        [JsonProperty("TMT")]
-        public string TMT;
-
-        [JsonProperty("TND")]
-        public string TND;
-
-        [JsonProperty("TONE")]
-        public string TONE;
-
-        [JsonProperty("TOP")]
-        public string TOP;
-
-        [JsonProperty("TRAC")]
-        public string TRAC;
-
-        [JsonProperty("TRB")]
-        public string TRB;
-
-        [JsonProperty("TRIBE")]
-        public string TRIBE;
-
-        [JsonProperty("TRU")]
-        public string TRU;
-
-        [JsonProperty("TRY")]
-        public string TRY;
-
-        [JsonProperty("TTD")]
-        public string TTD;
-
-        [JsonProperty("TVK")]
-        public string TVK;
-
-        [JsonProperty("TWD")]
-        public string TWD;
-
-        [JsonProperty("TZS")]
-        public string TZS;
-
-        [JsonProperty("UAH")]
-        public string UAH;
-
-        [JsonProperty("UGX")]
-        public string UGX;
-
-        [JsonProperty("UMA")]
-        public string UMA;
-
-        [JsonProperty("UNFI")]
-        public string UNFI;
-
-        [JsonProperty("UNI")]
-        public string UNI;
-
-        [JsonProperty("UPI")]
-        public string UPI;
-
-        [JsonProperty("USD")]
-        public string USD;
-
-        [JsonProperty("USDC")]
-        public string USDC;
-
-        [JsonProperty("USDT")]
-        public string USDT;
-
-        [JsonProperty("UST")]
-        public string UST;
-
-        [JsonProperty("UYU")]
-        public string UYU;
-
-        [JsonProperty("UZS")]
-        public string UZS;
-
-        [JsonProperty("VARA")]
-        public string VARA;
-
-        [JsonProperty("VEF")]
-        public string VEF;
-
-        [JsonProperty("VES")]
-        public string VES;
-
-        [JsonProperty("VET")]
-        public string VET;
-
-        [JsonProperty("VGX")]
-        public string VGX;
-
-        [JsonProperty("VND")]
-        public string VND;
-
-        [JsonProperty("VOXEL")]
-        public string VOXEL;
-
-        [JsonProperty("VTHO")]
-        public string VTHO;
-
-        [JsonProperty("VUV")]
-        public string VUV;
-
-        [JsonProperty("WAMPL")]
-        public string WAMPL;
-
-        [JsonProperty("WAXL")]
-        public string WAXL;
-
-        [JsonProperty("WBTC")]
-        public string WBTC;
-
-        [JsonProperty("WCFG")]
-        public string WCFG;
-
-        [JsonProperty("WLUNA")]
-        public string WLUNA;
-
-        [JsonProperty("WST")]
-        public string WST;
-
-        [JsonProperty("XAF")]
-        public string XAF;
-
-        [JsonProperty("XAG")]
-        public string XAG;
-
-        [JsonProperty("XAU")]
-        public string XAU;
-
-        [JsonProperty("XCD")]
-        public string XCD;
-
-        [JsonProperty("XCN")]
-        public string XCN;
-
-        [JsonProperty("XDR")]
-        public string XDR;
-
-        [JsonProperty("XLM")]
-        public string XLM;
-
-        [JsonProperty("XMON")]
-        public string XMON;
-
-        [JsonProperty("XOF")]
-        public string XOF;
-
-        [JsonProperty("XPD")]
-        public string XPD;
-
-        [JsonProperty("XPF")]
-        public string XPF;
-
-        [JsonProperty("XPT")]
-        public string XPT;
-
-        [JsonProperty("XRP")]
-        public string XRP;
-
-        [JsonProperty("XTZ")]
-        public string XTZ;
-
-        [JsonProperty("XYO")]
-        public string XYO;
-
-        [JsonProperty("YER")]
-        public string YER;
-
-        [JsonProperty("YFI")]
-        public string YFI;
-
-        [JsonProperty("YFII")]
-        public string YFII;
-
-        [JsonProperty("ZAR")]
-        public string ZAR;
-
-        [JsonProperty("ZEC")]
-        public string ZEC;
-
-        [JsonProperty("ZEN")]
-        public string ZEN;
-
-        [JsonProperty("ZMK")]
-        public string ZMK;
-
-        [JsonProperty("ZMW")]
-        public string ZMW;
-
-        [JsonProperty("ZRX")]
-        public string ZRX;
-
-        [JsonProperty("ZWD")]
-        public string ZWD;
+        public string _1INCH { get; set; }
+        public string AAVE { get; set; }
+        public string ABT { get; set; }
+        public string ACH { get; set; }
+        public string ACS { get; set; }
+        public string ADA { get; set; }
+        public string AED { get; set; }
+        public string AERGO { get; set; }
+        public string AFN { get; set; }
+        public string AGLD { get; set; }
+        public string AIOZ { get; set; }
+        public string ALCX { get; set; }
+        public string ALEPH { get; set; }
+        public string ALGO { get; set; }
+        public string ALICE { get; set; }
+        public string ALL { get; set; }
+        public string AMD { get; set; }
+        public string AMP { get; set; }
+        public string ANG { get; set; }
+        public string ANKR { get; set; }
+        public string ANT { get; set; }
+        public string AOA { get; set; }
+        public string APE { get; set; }
+        public string API3 { get; set; }
+        public string APT { get; set; }
+        public string ARB { get; set; }
+        public string ARPA { get; set; }
+        public string ARS { get; set; }
+        public string ASM { get; set; }
+        public string AST { get; set; }
+        public string ATA { get; set; }
+        public string ATOM { get; set; }
+        public string AUCTION { get; set; }
+        public string AUD { get; set; }
+        public string AUDIO { get; set; }
+        public string AURORA { get; set; }
+        public string AVAX { get; set; }
+        public string AVT { get; set; }
+        public string AWG { get; set; }
+        public string AXL { get; set; }
+        public string AXS { get; set; }
+        public string AZN { get; set; }
+        public string BADGER { get; set; }
+        public string BAL { get; set; }
+        public string BAM { get; set; }
+        public string BAND { get; set; }
+        public string BAT { get; set; }
+        public string BBD { get; set; }
+        public string BCH { get; set; }
+        public string BDT { get; set; }
+        public string BGN { get; set; }
+        public string BHD { get; set; }
+        public string BICO { get; set; }
+        public string BIF { get; set; }
+        public string BIT { get; set; }
+        public string BLUR { get; set; }
+        public string BLZ { get; set; }
+        public string BMD { get; set; }
+        public string BND { get; set; }
+        public string BNT { get; set; }
+        public string BOB { get; set; }
+        public string BOBA { get; set; }
+        public string BOND { get; set; }
+        public string BRL { get; set; }
+        public string BSD { get; set; }
+        public string BSV { get; set; }
+        public string BTC { get; set; }
+        public string BTN { get; set; }
+        public string BTRST { get; set; }
+        public string BUSD { get; set; }
+        public string BWP { get; set; }
+        public string BYN { get; set; }
+        public string BYR { get; set; }
+        public string BZD { get; set; }
+        public string C98 { get; set; }
+        public string CAD { get; set; }
+        public string CBETH { get; set; }
+        public string CDF { get; set; }
+        public string CELR { get; set; }
+        public string CGLD { get; set; }
+        public string CHF { get; set; }
+        public string CHZ { get; set; }
+        public string CLF { get; set; }
+        public string CLP { get; set; }
+        public string CLV { get; set; }
+        public string CNH { get; set; }
+        public string CNY { get; set; }
+        public string COMP { get; set; }
+        public string COP { get; set; }
+        public string COTI { get; set; }
+        public string COVAL { get; set; }
+        public string CRC { get; set; }
+        public string CRO { get; set; }
+        public string CRPT { get; set; }
+        public string CRV { get; set; }
+        public string CTSI { get; set; }
+        public string CTX { get; set; }
+        public string CUC { get; set; }
+        public string CUP { get; set; }
+        public string CVC { get; set; }
+        public string CVE { get; set; }
+        public string CVX { get; set; }
+        public string CZK { get; set; }
+        public string DAI { get; set; }
+        public string DAR { get; set; }
+        public string DASH { get; set; }
+        public string DDX { get; set; }
+        public string DESO { get; set; }
+        public string DEXT { get; set; }
+        public string DIA { get; set; }
+        public string DIMO { get; set; }
+        public string DJF { get; set; }
+        public string DKK { get; set; }
+        public string DNT { get; set; }
+        public string DOGE { get; set; }
+        public string DOP { get; set; }
+        public string DOT { get; set; }
+        public string DREP { get; set; }
+        public string DYP { get; set; }
+        public string DZD { get; set; }
+        public string EEK { get; set; }
+        public string EGLD { get; set; }
+        public string EGP { get; set; }
+        public string ELA { get; set; }
+        public string ENJ { get; set; }
+        public string ENS { get; set; }
+        public string EOS { get; set; }
+        public string ERN { get; set; }
+        public string ETB { get; set; }
+        public string ETC { get; set; }
+        public string ETH { get; set; }
+        public string ETH2 { get; set; }
+        public string EUR { get; set; }
+        public string EUROC { get; set; }
+        public string FARM { get; set; }
+        public string FET { get; set; }
+        public string FIDA { get; set; }
+        public string FIL { get; set; }
+        public string FIS { get; set; }
+        public string FJD { get; set; }
+        public string FKP { get; set; }
+        public string FLOW { get; set; }
+        public string FLR { get; set; }
+        public string FORT { get; set; }
+        public string FORTH { get; set; }
+        public string FOX { get; set; }
+        public string FX { get; set; }
+        public string GAL { get; set; }
+        public string GALA { get; set; }
+        public string GBP { get; set; }
+        public string GEL { get; set; }
+        public string GFI { get; set; }
+        public string GGP { get; set; }
+        public string GHS { get; set; }
+        public string GHST { get; set; }
+        public string GIP { get; set; }
+        public string GLM { get; set; }
+        public string GMD { get; set; }
+        public string GMT { get; set; }
+        public string GNF { get; set; }
+        public string GNO { get; set; }
+        public string GNT { get; set; }
+        public string GODS { get; set; }
+        public string GRT { get; set; }
+        public string GST { get; set; }
+        public string GTC { get; set; }
+        public string GTQ { get; set; }
+        public string GUSD { get; set; }
+        public string GYD { get; set; }
+        public string GYEN { get; set; }
+        public string HBAR { get; set; }
+        public string HFT { get; set; }
+        public string HIGH { get; set; }
+        public string HKD { get; set; }
+        public string HNL { get; set; }
+        public string HNT { get; set; }
+        public string HOPR { get; set; }
+        public string HRK { get; set; }
+        public string HTG { get; set; }
+        public string HUF { get; set; }
+        public string ICP { get; set; }
+        public string IDEX { get; set; }
+        public string IDR { get; set; }
+        public string ILS { get; set; }
+        public string ILV { get; set; }
+        public string IMP { get; set; }
+        public string IMX { get; set; }
+        public string INDEX { get; set; }
+        public string INJ { get; set; }
+        public string INR { get; set; }
+        public string INV { get; set; }
+        public string IOTX { get; set; }
+        public string IQD { get; set; }
+        public string IRR { get; set; }
+        public string ISK { get; set; }
+        public string JASMY { get; set; }
+        public string JEP { get; set; }
+        public string JMD { get; set; }
+        public string JOD { get; set; }
+        public string JPY { get; set; }
+        public string JUP { get; set; }
+        public string KAVA { get; set; }
+        public string KEEP { get; set; }
+        public string KES { get; set; }
+        public string KGS { get; set; }
+        public string KHR { get; set; }
+        public string KMF { get; set; }
+        public string KNC { get; set; }
+        public string KRL { get; set; }
+        public string KRW { get; set; }
+        public string KSM { get; set; }
+        public string KWD { get; set; }
+        public string KYD { get; set; }
+        public string KZT { get; set; }
+        public string LAK { get; set; }
+        public string LBP { get; set; }
+        public string LCX { get; set; }
+        public string LDO { get; set; }
+        public string LINK { get; set; }
+        public string LIT { get; set; }
+        public string LKR { get; set; }
+        public string LOKA { get; set; }
+        public string LOOM { get; set; }
+        public string LPT { get; set; }
+        public string LQTY { get; set; }
+        public string LRC { get; set; }
+        public string LRD { get; set; }
+        public string LSETH { get; set; }
+        public string LSL { get; set; }
+        public string LTC { get; set; }
+        public string LTL { get; set; }
+        public string LYD { get; set; }
+        public string MAD { get; set; }
+        public string MAGIC { get; set; }
+        public string MANA { get; set; }
+        public string MASK { get; set; }
+        public string MATH { get; set; }
+        public string MATIC { get; set; }
+        public string MCO2 { get; set; }
+        public string MDL { get; set; }
+        public string MDT { get; set; }
+        public string MEDIA { get; set; }
+        public string METIS { get; set; }
+        public string MGA { get; set; }
+        public string MINA { get; set; }
+        public string MIR { get; set; }
+        public string MKD { get; set; }
+        public string MKR { get; set; }
+        public string MLN { get; set; }
+        public string MMK { get; set; }
+        public string MNDE { get; set; }
+        public string MNT { get; set; }
+        public string MONA { get; set; }
+        public string MOP { get; set; }
+        public string MPL { get; set; }
+        public string MRO { get; set; }
+        public string MRU { get; set; }
+        public string MSOL { get; set; }
+        public string MTL { get; set; }
+        public string MULTI { get; set; }
+        public string MUR { get; set; }
+        public string MUSD { get; set; }
+        public string MUSE { get; set; }
+        public string MVR { get; set; }
+        public string MWK { get; set; }
+        public string MXC { get; set; }
+        public string MXN { get; set; }
+        public string MYR { get; set; }
+        public string MZN { get; set; }
+        public string NAD { get; set; }
+        public string NCT { get; set; }
+        public string NEAR { get; set; }
+        public string NEST { get; set; }
+        public string NGN { get; set; }
+        public string NIO { get; set; }
+        public string NKN { get; set; }
+        public string NMR { get; set; }
+        public string NOK { get; set; }
+        public string NPR { get; set; }
+        public string NU { get; set; }
+        public string NZD { get; set; }
+        public string OCEAN { get; set; }
+        public string OGN { get; set; }
+        public string OMG { get; set; }
+        public string OMR { get; set; }
+        public string OOKI { get; set; }
+        public string OP { get; set; }
+        public string ORCA { get; set; }
+        public string ORN { get; set; }
+        public string OSMO { get; set; }
+        public string OXT { get; set; }
+        public string PAB { get; set; }
+        public string PAX { get; set; }
+        public string PEN { get; set; }
+        public string PERP { get; set; }
+        public string PGK { get; set; }
+        public string PHP { get; set; }
+        public string PKR { get; set; }
+        public string PLA { get; set; }
+        public string PLN { get; set; }
+        public string PLU { get; set; }
+        public string PNG { get; set; }
+        public string POLS { get; set; }
+        public string POLY { get; set; }
+        public string POND { get; set; }
+        public string POWR { get; set; }
+        public string PRIME { get; set; }
+        public string PRO { get; set; }
+        public string PRQ { get; set; }
+        public string PUNDIX { get; set; }
+        public string PYG { get; set; }
+        public string PYR { get; set; }
+        public string PYUSD { get; set; }
+        public string QAR { get; set; }
+        public string QI { get; set; }
+        public string QNT { get; set; }
+        public string QSP { get; set; }
+        public string QUICK { get; set; }
+        public string RAD { get; set; }
+        public string RAI { get; set; }
+        public string RARE { get; set; }
+        public string RARI { get; set; }
+        public string RBN { get; set; }
+        public string REN { get; set; }
+        public string REP { get; set; }
+        public string REPV2 { get; set; }
+        public string REQ { get; set; }
+        public string RGT { get; set; }
+        public string RLC { get; set; }
+        public string RLY { get; set; }
+        public string RNDR { get; set; }
+        public string RON { get; set; }
+        public string ROSE { get; set; }
+        public string RPL { get; set; }
+        public string RSD { get; set; }
+        public string RUB { get; set; }
+        public string RWF { get; set; }
+        public string SAND { get; set; }
+        public string SAR { get; set; }
+        public string SBD { get; set; }
+        public string SCR { get; set; }
+        public string SDG { get; set; }
+        public string SEI { get; set; }
+        public string SEK { get; set; }
+        public string SGD { get; set; }
+        public string SHIB { get; set; }
+        public string SHP { get; set; }
+        public string SHPING { get; set; }
+        public string SKK { get; set; }
+        public string SKL { get; set; }
+        public string SLL { get; set; }
+        public string SNT { get; set; }
+        public string SNX { get; set; }
+        public string SOL { get; set; }
+        public string SOS { get; set; }
+        public string SPA { get; set; }
+        public string SPELL { get; set; }
+        public string SRD { get; set; }
+        public string SSP { get; set; }
+        public string STD { get; set; }
+        public string STG { get; set; }
+        public string STORJ { get; set; }
+        public string STX { get; set; }
+        public string SUI { get; set; }
+        public string SUKU { get; set; }
+        public string SUPER { get; set; }
+        public string SUSHI { get; set; }
+        public string SVC { get; set; }
+        public string SWFTC { get; set; }
+        public string SYLO { get; set; }
+        public string SYN { get; set; }
+        public string SZL { get; set; }
+        public string T { get; set; }
+        public string THB { get; set; }
+        public string TIME { get; set; }
+        public string TJS { get; set; }
+        public string TMM { get; set; }
+        public string TMT { get; set; }
+        public string TND { get; set; }
+        public string TONE { get; set; }
+        public string TOP { get; set; }
+        public string TRAC { get; set; }
+        public string TRB { get; set; }
+        public string TRIBE { get; set; }
+        public string TRU { get; set; }
+        public string TRY { get; set; }
+        public string TTD { get; set; }
+        public string TVK { get; set; }
+        public string TWD { get; set; }
+        public string TZS { get; set; }
+        public string UAH { get; set; }
+        public string UGX { get; set; }
+        public string UMA { get; set; }
+        public string UNFI { get; set; }
+        public string UNI { get; set; }
+        public string UPI { get; set; }
+        public string USD { get; set; }
+        public string USDC { get; set; }
+        public string USDT { get; set; }
+        public string UST { get; set; }
+        public string UYU { get; set; }
+        public string UZS { get; set; }
+        public string VARA { get; set; }
+        public string VEF { get; set; }
+        public string VES { get; set; }
+        public string VET { get; set; }
+        public string VGX { get; set; }
+        public string VND { get; set; }
+        public string VOXEL { get; set; }
+        public string VTHO { get; set; }
+        public string VUV { get; set; }
+        public string WAMPL { get; set; }
+        public string WAXL { get; set; }
+        public string WBTC { get; set; }
+        public string WCFG { get; set; }
+        public string WLUNA { get; set; }
+        public string WST { get; set; }
+        public string XAF { get; set; }
+        public string XAG { get; set; }
+        public string XAU { get; set; }
+        public string XCD { get; set; }
+        public string XCN { get; set; }
+        public string XDR { get; set; }
+        public string XLM { get; set; }
+        public string XMON { get; set; }
+        public string XOF { get; set; }
+        public string XPD { get; set; }
+        public string XPF { get; set; }
+        public string XPT { get; set; }
+        public string XRP { get; set; }
+        public string XTZ { get; set; }
+        public string XYO { get; set; }
+        public string YER { get; set; }
+        public string YFI { get; set; }
+        public string YFII { get; set; }
+        public string ZAR { get; set; }
+        public string ZEC { get; set; }
+        public string ZEN { get; set; }
+        public string ZMK { get; set; }
+        public string ZMW { get; set; }
+        public string ZRX { get; set; }
+        public string ZWD { get; set; }
     }
 
     public class Root
     {
-        [JsonProperty("data")]
-        public Data Data;
+        public Data data { get; set; }
     }
+
+
 
 
 }

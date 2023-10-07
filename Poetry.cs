@@ -11,7 +11,7 @@ namespace apiConnection
     public class Poetry
     {
         [JsonProperty("lines")]
-        public List<string> Lines;
+        public string Lines;
     }
 
 
