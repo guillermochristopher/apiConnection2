@@ -14,7 +14,7 @@ namespace apiConnection
 
         {
             //getting the url api and save it in the "url" variable, so that i can use it later
-            string url = "https://api.coinbase.com/v2/exchange-rates";
+            string url = "https://api.coinbase.com/v2/exchange-rates?currency=BTC";
 
             //http client is used to be able to manage requests to server
             //to create a http client object do the next:
