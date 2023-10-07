@@ -9,8 +9,8 @@ namespace apiConnection
     class Program
     {
 
-        static async Task Main(string[] args)//this main method uses "async" keyword. to specify them that Main method it is going to do async processess.
-                                             //If u dont specify that Main method will not do that. Also, "Task" is used to specify that Main method is going to return an async task.
+        static async Task Main(string[] args)//this main method uses "async" keyword to specify Main method it is going to do async processess.
+                                             //If u dont specify that, Main method will not do that. Also, "Task" is used to specify that Main method is going to return an async task.
 
         {
             //getting the url api and save it in the "url" variable, so that i can use it later
