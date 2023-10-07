@@ -37,7 +37,7 @@ namespace apiConnection
                 //then just print the result
                 //Console.WriteLine(jsonRespone);
 
-                //Deserialize process: Converting json response into a c# array of type Post[] (the class we added w/ json data as c# properties)
+                //Deserialize process: Converting json response into a c# array of type Root[] (the class we added w/ json data as c# properties)
 
                 var root = JsonConvert.DeserializeObject<Root>(jsonRespone);
 
@@ -47,7 +47,9 @@ namespace apiConnection
                 var rates = data.rates.EUR;
 
                 //print the array of object using the iteration
-                Console.WriteLine(rates);
+                
+                Console.WriteLine("Currency: {0}", currency);
+                Console.WriteLine("Euros:{0}",rates);
 
             }
             catch (Exception e)
