@@ -48,7 +48,7 @@ namespace apiConnection
 
                 //print the array of object using the iteration
                 
-                Console.WriteLine("Currency: {0}", currency);
+                Console.WriteLine("The actual Currency is: {0}", currency);
                 Console.WriteLine("Euros:{0}",rates);
 
             }
